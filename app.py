@@ -67,8 +67,8 @@ def predict_batch(model, batch, features, threshold):
 
 
 def main():
-    st.set_page_config(page_title='Винная подборка', page_icon='🍷', layout='wide')
-    st.title('🍷 Винная подборка')
+    st.set_page_config(page_title='Винная подборка', layout='wide')
+    st.title('Винная подборка')
     st.caption('Хорошее вино — экспертная оценка не ниже 7. Модель использует лабораторные признаки.')
 
     missing_files = [name for name in ['model.joblib', 'test.csv', 'config.json']
