@@ -106,6 +106,7 @@ def main():
                     LABELS[feature], min_value=float(X_test[feature].min()),
                     max_value=float(X_test[feature].max()),
                     value=float(X_test[feature].median()), format='%.5f',
+                    step=0.00001 if feature == 'density' else 0.01,
                     key=f'feature_{feature}')
             values['is_red'] = int(st.toggle('Красное вино', value=bool(X_test['is_red'].median())))
             st.caption('Переключатель выключен — белое вино; включён — красное.')
